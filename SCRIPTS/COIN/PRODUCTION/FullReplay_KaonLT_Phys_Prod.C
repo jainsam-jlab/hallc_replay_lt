@@ -277,11 +277,30 @@ void FullReplay_KaonLT_Phys_Prod (Int_t RunNumber = 0, Int_t MaxEvent = 0) {
   // Define cuts file with different Aerogel trays
   //analyzer->SetCutFile("DEF-files/PRODUCTION/CUTS/coin_production_cuts.def");  // optional
   //  analyzer->SetCutFile("DEF-files/PRODUCTION/CUTS/coin_tracking_cuts.def");  // optional
+  // Sameer -- trying to change the def cut file to incorporate the coinblock correction
   if (RunNumber >= 4965 && RunNumber <= 5334){
-   analyzer->SetCutFile("DEF-files/PRODUCTION/KaonLT_DEF/Aero_1p011/Offline_Physics_Coin_Cuts.def");
+   analyzer->SetCutFile("DEF-files/PRODUCTION/KaonLT_DEF/Aero_1p011/Offline_Physics_CoinBlock_1.def");
+  }
+  else if (RunNumber >= 6638 && RunNumber <= 7045){
+   analyzer->SetCutFile("DEF-files/PRODUCTION/KaonLT_DEF/Offline_Physics_CoinBlock_correction_Nacer.def"); 
+  }
+  else if (RunNumber >= 7871 && RunNumber <= 7939){
+   analyzer->SetCutFile("DEF-files/PRODUCTION/KaonLT_DEF/Offline_Physics_CoinBlock_correction.def"); 
   }
   else if (RunNumber >= 7940 && RunNumber <= 8356){
-   analyzer->SetCutFile("DEF-files/PRODUCTION/KaonLT_DEF/Aero_1p011/Offline_Physics_Coin_Cuts.def"); 
+   analyzer->SetCutFile("DEF-files/PRODUCTION/KaonLT_DEF/Aero_1p011/Offline_Physics_CoinBlock_1.def"); 
+  }
+  else if (RunNumber >= 4865 && RunNumber <= 4870){
+   analyzer->SetCutFile("DEF-files/PRODUCTION/KaonLT_DEF/Offline_Physics_CoinBlock_correction_160ns.def"); 
+  }
+  else if (RunNumber >= 4871 && RunNumber <= 4874){
+   analyzer->SetCutFile("DEF-files/PRODUCTION/KaonLT_DEF/Offline_Physics_CoinBlock_correction_160ns_b.def"); 
+  }
+  else if (RunNumber >= 4875 && RunNumber <= 4894){
+   analyzer->SetCutFile("DEF-files/PRODUCTION/KaonLT_DEF/Offline_Physics_CoinBlock_correction_160ns.def"); 
+  }
+  else if (RunNumber >= 4895 && RunNumber <= 4964){
+   analyzer->SetCutFile("DEF-files/PRODUCTION/KaonLT_DEF/Offline_Physics_CoinBlock_correction.def"); 
   }
   else {
    analyzer->SetCutFile("DEF-files/PRODUCTION/KaonLT_DEF/Offline_Physics_Coin_Cuts.def");
