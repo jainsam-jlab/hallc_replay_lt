@@ -311,20 +311,20 @@ void FullReplay_PionLT_Lumi_Coin (Int_t RunNumber = 0, Int_t MaxEvent = 0) {
    analyzer->SetCutFile("DEF-files/PRODUCTION/PionLT_DEF/Aero_1p011/Offline_Lumi_Coin_Cuts.def");
   }
 
-
+// Sameer-- changing paths in the Form command for all four  junaid to jainsam
   // File to record accounting information for cuts
-  analyzer->SetSummaryFile(Form("/volatile/hallc/c-pionlt/junaid/REPORT_OUTPUT/SUMMARY_OUTPUT/Lumi/PionLT_LumiCoin_summary_production_%d_%d.report", RunNumber, MaxEvent));  // optional
+  analyzer->SetSummaryFile(Form("/volatile/hallc/c-pionlt/jainsam/REPORT_OUTPUT/SUMMARY_OUTPUT/Lumi/PionLT_LumiCoin_summary_production_%d_%d.report", RunNumber, MaxEvent));  // optional
   // Start the actual analysis.
   analyzer->Process(run);
   // Create report file from template
   //  analyzer->PrintReport("TEMPLATES/COIN/PRODUCTION/COIN_PROD.template",
   analyzer->PrintReport("TEMPLATES/COIN/PRODUCTION/PionLT_TEMP/PionLT_Offline_Lumi_Coin.template",
-  Form("/volatile/hallc/c-pionlt/junaid/REPORT_OUTPUT/Analysis/Lumi/PionLT_replay_luminosity_%d_%d.report", RunNumber, MaxEvent));  // optional
+  Form("/volatile/hallc/c-pionlt/jainsam/REPORT_OUTPUT/Analysis/Lumi/PionLT_replay_luminosity_%d_%d.report", RunNumber, MaxEvent));  // optional
   // Helicity scalers output
   analyzer->PrintReport("TEMPLATES/HMS/SCALERS/hhelscalers.template",
-                        Form("/volatile/hallc/c-pionlt/junaid/REPORT_OUTPUT/Scalers/Lumi/PionLT_replay_hms_helicity_scalers_%d_%d.report", RunNumber, MaxEvent));  // optional  
+                        Form("/volatile/hallc/c-pionlt/jainsam/REPORT_OUTPUT/Scalers/Lumi/PionLT_replay_hms_helicity_scalers_%d_%d.report", RunNumber, MaxEvent));  // optional  
   analyzer->PrintReport("TEMPLATES/SHMS/SCALERS/phelscalers.template",
-                        Form("/volatile/hallc/c-pionlt/junaid/REPORT_OUTPUT/Scalers/Lumi/PionLT_replay_shms_helicity_scalers_%d_%d.report", RunNumber, MaxEvent));  // optional  
+                        Form("/volatile/hallc/c-pionlt/jainsam/REPORT_OUTPUT/Scalers/Lumi/PionLT_replay_shms_helicity_scalers_%d_%d.report", RunNumber, MaxEvent));  // optional  
 
 /*
   if (RunNumber >= 11700 && RunNumber <= 14900){

@@ -131,7 +131,7 @@ void FullReplay_PionLT_Phys_Prod (Int_t RunNumber = 0, Int_t MaxEvent = 0) {
   //phelscaler->SetDebugFile("PHelScaler.txt");
   phelscaler->SetROC(8);
   phelscaler->SetUseFirstEvent(kTRUE);
-  gHaEvtHandlers->Add(phelscaler);
+  // gHaEvtHandlers->Add(phelscaler);
 
   //=:=:=
   // HMS 
@@ -199,7 +199,7 @@ void FullReplay_PionLT_Phys_Prod (Int_t RunNumber = 0, Int_t MaxEvent = 0) {
   //hhelscaler->SetDebugFile("HHelScaler.txt");
   hhelscaler->SetROC(5);
   hhelscaler->SetUseFirstEvent(kTRUE);
-  gHaEvtHandlers->Add(hhelscaler);
+  //gHaEvtHandlers->Add(hhelscaler);
 
   //=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=
   // Kinematics Modules
